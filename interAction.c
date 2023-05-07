@@ -2,8 +2,8 @@
  *
  * Interact with the user
  *************************/
-
 #include<stdio.h>
+#include<string.h>
 
 int main(){
 
@@ -18,15 +18,15 @@ int main(){
     scanf("%s", username);
 
     //Display the name
-    printf("\nIs %s",username," your real name? yes/no: ");
+    printf("Is %s your real name? yes/no: ", username);
     scanf("%s", reply);
 
     //The reply
-    switch((char)reply){
-        case "yes":
+    switch((char)reply[0]){
+        case 'y':
             printf("\nWow! You must have had a brutal childhood.");
             break;
-        case "no":
+        case 'n':
             printf("\nGo to the Social Security Office and change it.");
             break;
         default:
